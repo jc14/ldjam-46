@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Card<T> : MonoBehaviour where T : CardAsset
 {
-    public T asset;
-
     public TMP_Text titleText;
     public TMP_Text descriptionText;
+
+    protected T asset;
 
     public void Render(string title, string description)
     {
