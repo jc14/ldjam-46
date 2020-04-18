@@ -22,6 +22,11 @@ public class Card<T> : MonoBehaviour where T : CardAsset
         Render();
     }
 
+    public void Delete()
+    {
+        Destroy(gameObject);
+    }
+
     private void Render()
     {
         Render(asset.Title, asset.Description);

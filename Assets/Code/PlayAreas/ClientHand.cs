@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BadHand : PlayArea<BadCard, BadCardAsset>
+public class ClientHand : Hand<BadCard, BadCardAsset>
 {
     [SerializeField] private int cardsToDrawEachRound;
 

@@ -11,17 +11,21 @@ public class Client : MonoBehaviour
     public float RelationshipHealth => relationshipHealth / settings.HealthPoints;
 
     private ClientSettings settings;
-    private BadHand hand;
+    private ClientHand hand;
     private ClientUI ui;
+    private Client lover;
 
     private void Awake()
     {
-        hand = GetComponent<BadHand>();
+        hand = GetComponent<ClientHand>();
         ui = GetComponent<ClientUI>();
     }
 
-    public void Setup(Board board, ClientSettings settings)
+    public void Setup(Board board, Client lover, ClientSettings settings)
     {
+        CleanUp();
+
+        this.lover = lover;
         this.settings = settings;
 
         relationshipHealth = settings.HealthPoints;
@@ -31,6 +35,11 @@ public class Client : MonoBehaviour
         ui.Render(this);
     }
 
+    public void CleanUp()
+    {
+        hand.Clear();
+    }
+
     public void StartTurn()
     {
         hand.StartTurn();
@@ -38,11 +47,11 @@ public class Client : MonoBehaviour
         // TODO: Loop over cards and apply damage
         foreach (BadCard card in hand.GetCards())
         {
-            ApplyDamage(card.Damage);
+            lover.ApplyDamage(card.Damage);
         }
     }
 
-    private void ApplyDamage(int amount)
+    public void ApplyDamage(int amount)
     {
         relationshipHealth -= amount;
 

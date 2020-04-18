@@ -2,23 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hand : PlayArea<RepairCard, RepairCardAsset>
+public abstract class Hand<TCard, TAsset> : MonoBehaviour where TCard : Card<TAsset> where TAsset : CardAsset
 {
-    [Range(1, 10)]
-    [SerializeField] private int cardsToStart = 5;
+    [SerializeField] private Transform cardsContent;
 
-    public override void Setup(Board board)
+    protected Board board;
+
+    private List<TCard> cards;
+
+    private void Awake()
     {
-        this.board = board;
+        cards = new List<TCard>();
+    }
 
-        for (int i = 0; i < cardsToStart; i++)
+    public void AddCard(TCard card)
+    {
+        cards.Add(card);
+        card.transform.SetParent(cardsContent);
+    }
+
+    public void RemoveCard(TCard card)
+    {
+        cards.Remove(card);
+        card.Delete();
+    }
+
+    public TCard[] GetCards()
+    {
+        return cards.ToArray();
+    }
+
+    /// <summary>
+    /// Removes all cards from hand.
+    /// </summary>
+    public void Clear()
+    {
+        while (cards.Count > 0)
         {
-            AddCard(board.DrawRepairCard());
+            RemoveCard(cards[0]);
         }
     }
 
-    public override void StartTurn()
-    {
-        
-    }
+    public abstract void Setup(Board board);
+    public abstract void StartTurn();
 }

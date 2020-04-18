@@ -16,13 +16,13 @@ public class Board : MonoBehaviour
     private CardAssetFactory<RepairCardAsset> repairCardFactory;
     private CardAssetFactory<BadCardAsset> badCardFactory;
 
-    private Hand playerHand;
+    private PlayerHand playerHand;
     private Client client1;
     private Client client2;
 
     private void Awake()
     {
-        playerHand = GetComponentInChildren<Hand>();
+        playerHand = GetComponentInChildren<PlayerHand>();
 
         client1 = transform.Find("Client 1").GetComponent<Client>();
         client2 = transform.Find("Client 2").GetComponent<Client>();
@@ -37,8 +37,8 @@ public class Board : MonoBehaviour
         IsPlayingGame = true;
 
         playerHand.Setup(this);
-        client1.Setup(this, clientSettings);
-        client2.Setup(this, clientSettings);
+        client1.Setup(this, client2, clientSettings);
+        client2.Setup(this, client1, clientSettings);
 
         StartRound();
     }
