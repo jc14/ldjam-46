@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class RepairCard : Card<RepairCardAsset>
 {
+    public TMP_Text RepairText;
+
     public int RepairAmount => asset.RepairAmount;
 
     private PlayerHand hand;
@@ -41,6 +44,6 @@ public class RepairCard : Card<RepairCardAsset>
 
     protected override void OnRender()
     {
-
+        RepairText.text = RepairAmount.ToString();
     }
 }

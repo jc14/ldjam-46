@@ -15,4 +15,4 @@ MonoBehaviour:
   isEnabled: 1
   title: Give Flowers
   description: 
-  repairAmount: 0
+  repairAmount: 2

@@ -16,4 +16,4 @@ MonoBehaviour:
   title: Cook a Meal
   description: Cook a lovely meal for your SO. Hopefully this will help her forgive
     you. Doubt.
-  repairAmount: 0
+  repairAmount: 10

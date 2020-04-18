@@ -15,4 +15,4 @@ MonoBehaviour:
   isEnabled: 1
   title: Send a Sweet Text
   description: 
-  repairAmount: 0
+  repairAmount: 1
