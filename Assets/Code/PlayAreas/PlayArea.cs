@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayArea<TCard, TAsset> : MonoBehaviour where TCard : Card<TAsset> where TAsset : CardAsset
+public abstract class PlayArea<TCard, TAsset> : MonoBehaviour where TCard : Card<TAsset> where TAsset : CardAsset
 {
+    protected Board board;
+
     private List<TCard> cards;
 
     private void Awake()
@@ -16,4 +18,7 @@ public class PlayArea<TCard, TAsset> : MonoBehaviour where TCard : Card<TAsset> 
         cards.Add(card);
         card.transform.SetParent(transform);
     }
+
+    public abstract void Setup(Board board);
+    public abstract void StartTurn();
 }

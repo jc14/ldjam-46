@@ -30,6 +30,11 @@ public class Board : MonoBehaviour
     {
         Debug.Log("New game bitches!!!");
         IsPlayingGame = true;
+
+        playerHand.Setup(this);
+        badHand.Setup(this);
+
+        StartRound();
     }
 
     [ContextMenu("End Game")]
@@ -38,6 +43,17 @@ public class Board : MonoBehaviour
         IsPlayingGame = false;
         // TODO: I think I'm setting myself up for failure here...
         GameManager.ToggleMainMenu();
+    }
+
+    public void StartRound()
+    {
+        playerHand.StartTurn();
+        badHand.StartTurn();
+    }
+
+    public void EndRound()
+    {
+
     }
 
     public void HandleMainMenuToggle()

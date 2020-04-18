@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 58830014}
   - component: {fileID: 58830013}
   - component: {fileID: 58830017}
+  - component: {fileID: 58830019}
   - component: {fileID: 58830018}
   m_Layer: 5
   m_Name: Board
@@ -255,6 +256,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Board: {fileID: 58830017}
+--- !u!114 &58830019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58830012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d840aa574906a2c4b8c376ee913c10aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndTurnButton: {fileID: 0}
 --- !u!1 &573940354
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74200137926dff4f8010fde522be327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsToStart: 5
 --- !u!1 &981273272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,8 +1207,8 @@ GameObject:
   - component: {fileID: 1279816859}
   - component: {fileID: 1279816863}
   - component: {fileID: 1279816862}
-  - component: {fileID: 1279816861}
   - component: {fileID: 1279816860}
+  - component: {fileID: 1279816861}
   m_Layer: 5
   m_Name: Bad Hand
   m_TagString: Untagged
@@ -1232,6 +1247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a89d5c9c8033da44acd925ac7637f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsToDrawEachRound: 1
 --- !u!114 &1279816861
 MonoBehaviour:
   m_ObjectHideFlags: 0
