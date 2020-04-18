@@ -15,12 +15,15 @@ public class Board : MonoBehaviour
     private CardAssetFactory<BadCardAsset> badCardFactory;
 
     private Hand playerHand;
-    private BadHand badHand;
+    private Client client1;
+    private Client client2;
 
     private void Awake()
     {
         playerHand = GetComponentInChildren<Hand>();
-        badHand = GetComponentInChildren<BadHand>();
+
+        client1 = transform.Find("Client 1").GetComponent<Client>();
+        client2 = transform.Find("Client 2").GetComponent<Client>();
 
         repairCardFactory = new CardAssetFactory<RepairCardAsset>();
         badCardFactory = new CardAssetFactory<BadCardAsset>();
@@ -32,7 +35,8 @@ public class Board : MonoBehaviour
         IsPlayingGame = true;
 
         playerHand.Setup(this);
-        badHand.Setup(this);
+        client1.Setup();
+        client2.Setup();
 
         StartRound();
     }
@@ -48,7 +52,6 @@ public class Board : MonoBehaviour
     public void StartRound()
     {
         playerHand.StartTurn();
-        badHand.StartTurn();
     }
 
     public void EndRound()
@@ -78,6 +81,6 @@ public class Board : MonoBehaviour
         BadCard newCard = go.GetComponent<BadCard>();
         newCard.SetAsset(badCardFactory.GetRandomCard());
 
-        badHand.AddCard(newCard);
+        //badHand.AddCard(newCard);
     }
 }
