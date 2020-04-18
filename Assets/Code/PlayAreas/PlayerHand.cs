@@ -7,6 +7,8 @@ public class PlayerHand : Hand<RepairCard, RepairCardAsset>
     [Range(1, 10)]
     [SerializeField] private int cardsToStart = 5;
 
+    public RepairCard selectedCard;
+
     public override void Setup(Board board)
     {
         Clear();
@@ -14,12 +16,32 @@ public class PlayerHand : Hand<RepairCard, RepairCardAsset>
 
         for (int i = 0; i < cardsToStart; i++)
         {
-            AddCard(board.DrawRepairCard());
+            RepairCard newCard = board.DrawRepairCard();
+            AddCard(newCard);
+            newCard.SetPlayerHand(this);
         }
     }
 
     public override void StartTurn()
     {
         
+    }
+
+    public void SelectCard(RepairCard card)
+    {
+        if (selectedCard != null)
+            DeselectCard();
+
+        selectedCard = card;
+        card.Select();
+    }
+
+    public void DeselectCard()
+    {
+        if (selectedCard != null)
+        {
+            selectedCard.Deselect();
+            selectedCard = null;
+        }
     }
 }

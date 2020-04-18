@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public Board Board;
+    private Player player;
+
+    private void Awake()
+    {
+        player = GetComponent<Player>();
+    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetMouseButtonDown(1))
         {
-            Board.HandleMainMenuToggle();
+            player.DeselectCard();
         }
     }
 }

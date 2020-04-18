@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 521291593763263141}
   - component: {fileID: 6478926856372069917}
   - component: {fileID: 9175821880297527575}
+  - component: {fileID: 5408707026623935138}
   m_Layer: 5
   m_Name: Graphics
   m_TagString: Untagged
@@ -230,6 +231,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &5408707026623935138
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3788785534658782386}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d6aff091655cd0a43a080e918d0f9dd5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5780559396880902050
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfdec90921ed354490fac2a788bfae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asset: {fileID: 0}
   titleText: {fileID: 5760108483881494536}
   descriptionText: {fileID: 2557339868192857455}
 --- !u!1 &6569978936347875291

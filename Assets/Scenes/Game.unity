@@ -1076,9 +1076,11 @@ GameObject:
   - component: {fileID: 701333085}
   - component: {fileID: 701333087}
   - component: {fileID: 701333086}
+  - component: {fileID: 701333088}
   - component: {fileID: 701333089}
+  - component: {fileID: 701333090}
   m_Layer: 5
-  m_Name: Player Hand
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1140,6 +1142,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701333084}
   m_CullTransparentMesh: 0
+--- !u!114 &701333088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701333084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94cbd2cf86d3ed49a1e7636e027e28e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &701333089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1154,6 +1168,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardsContent: {fileID: 1397710949}
   cardsToStart: 5
+  selectedCard: {fileID: 0}
+--- !u!114 &701333090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701333084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3134ac8ba9abb074eb495222e4b14428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &735896906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,8 +1954,8 @@ GameObject:
   - component: {fileID: 1250237888}
   - component: {fileID: 1250237892}
   - component: {fileID: 1250237891}
-  - component: {fileID: 1250237890}
   - component: {fileID: 1250237893}
+  - component: {fileID: 1250237890}
   - component: {fileID: 1250237889}
   m_Layer: 5
   m_Name: Client 2
@@ -2047,8 +2074,8 @@ GameObject:
   - component: {fileID: 1279816859}
   - component: {fileID: 1279816863}
   - component: {fileID: 1279816862}
-  - component: {fileID: 1279816860}
   - component: {fileID: 1279816864}
+  - component: {fileID: 1279816860}
   - component: {fileID: 1279816861}
   m_Layer: 5
   m_Name: Client 1
