@@ -35,8 +35,8 @@ public class Board : MonoBehaviour
         IsPlayingGame = true;
 
         playerHand.Setup(this);
-        client1.Setup();
-        client2.Setup();
+        client1.Setup(this);
+        client2.Setup(this);
 
         StartRound();
     }
@@ -44,6 +44,7 @@ public class Board : MonoBehaviour
     [ContextMenu("End Game")]
     public void EndGame()
     {
+        Debug.Log("Game over bitches!!!");
         IsPlayingGame = false;
         // TODO: I think I'm setting myself up for failure here...
         GameManager.ToggleMainMenu();
@@ -51,12 +52,16 @@ public class Board : MonoBehaviour
 
     public void StartRound()
     {
+        Debug.Log("New round bitches!!!");
         playerHand.StartTurn();
+
+        client1.StartTurn();
+        client2.StartTurn();
     }
 
     public void EndRound()
     {
-
+        Debug.Log("End round bitches!!!");
     }
 
     public void HandleMainMenuToggle()
@@ -65,22 +70,22 @@ public class Board : MonoBehaviour
     }
 
     [ContextMenu("Draw Repair Card")]
-    public void DrawRepairCard()
+    public RepairCard DrawRepairCard()
     {
         GameObject go = Instantiate(RepairCardPrefab);
         RepairCard newCard = go.GetComponent<RepairCard>();
         newCard.SetAsset(repairCardFactory.GetRandomCard());
 
-        playerHand.AddCard(newCard);
+        return newCard;
     }
 
     [ContextMenu("Draw Bad Card")]
-    public void DrawBadCard()
+    public BadCard DrawBadCard()
     {
         GameObject go = Instantiate(BadCardPrefab);
         BadCard newCard = go.GetComponent<BadCard>();
         newCard.SetAsset(badCardFactory.GetRandomCard());
 
-        //badHand.AddCard(newCard);
+        return newCard;
     }
 }

@@ -19,10 +19,19 @@ public class Client : MonoBehaviour
         ui = GetComponent<ClientUI>();
     }
 
-    public void Setup()
+    public void Setup(Board board)
     {
         relationshipHealth = 1;
 
+        hand.Setup(board);
+
         ui.Render(this);
+    }
+
+    public void StartTurn()
+    {
+        hand.StartTurn();
+
+        // TODO: Loop over cards and apply damage
     }
 }

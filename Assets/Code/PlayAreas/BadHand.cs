@@ -15,7 +15,7 @@ public class BadHand : PlayArea<BadCard, BadCardAsset>
     {
         for (int i = 0; i < cardsToDrawEachRound; i++)
         {
-            board.DrawBadCard();
+            AddCard(board.DrawBadCard());
         }
     }
 }

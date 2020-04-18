@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class PlayArea<TCard, TAsset> : MonoBehaviour where TCard : Card<TAsset> where TAsset : CardAsset
 {
+    public Transform cardsContent;
+
     protected Board board;
 
     private List<TCard> cards;
@@ -16,7 +18,7 @@ public abstract class PlayArea<TCard, TAsset> : MonoBehaviour where TCard : Card
     public void AddCard(TCard card)
     {
         cards.Add(card);
-        card.transform.SetParent(transform);
+        card.transform.SetParent(cardsContent);
     }
 
     public abstract void Setup(Board board);

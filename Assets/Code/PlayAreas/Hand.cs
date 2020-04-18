@@ -13,7 +13,7 @@ public class Hand : PlayArea<RepairCard, RepairCardAsset>
 
         for (int i = 0; i < cardsToStart; i++)
         {
-            board.DrawRepairCard();
+            AddCard(board.DrawRepairCard());
         }
     }
 
