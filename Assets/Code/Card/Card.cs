@@ -11,6 +11,8 @@ public abstract class Card<T> : MonoBehaviour, IPointerClickHandler where T : Ca
 
     protected T asset;
 
+    protected Board board;
+
     protected Animator animator;
 
     private void Awake()
@@ -31,16 +33,18 @@ public abstract class Card<T> : MonoBehaviour, IPointerClickHandler where T : Ca
         }
     }
 
+    public void Setup(Board board, T asset)
+    {
+        this.board = board;
+        this.asset = asset;
+
+        Render();
+    }
+
     public void Render(string title, string description)
     {
         titleText.text = title;
         descriptionText.text = description;
-    }
-
-    public void SetAsset(T asset)
-    {
-        this.asset = asset;
-        Render();
     }
 
     public void Delete()
@@ -53,6 +57,7 @@ public abstract class Card<T> : MonoBehaviour, IPointerClickHandler where T : Ca
         Render(asset.Title, asset.Description);
     }
 
+    public abstract void Initialize();
     protected abstract void OnLeftClick();
     protected abstract void OnRightClick();
 }

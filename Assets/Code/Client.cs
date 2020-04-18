@@ -31,6 +31,7 @@ public class Client : MonoBehaviour
         relationshipHealth = settings.HealthPoints;
 
         hand.Setup(board);
+        hand.SetClient(this);
 
         ui.Render(this);
     }

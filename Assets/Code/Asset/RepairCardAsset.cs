@@ -6,4 +6,5 @@ using UnityEngine;
 public class RepairCardAsset : CardAsset
 {
     [SerializeField] private int repairAmount;
+    public int RepairAmount => repairAmount;
 }

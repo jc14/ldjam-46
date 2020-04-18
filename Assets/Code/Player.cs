@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public RepairCard SelectedCard => hand.selectedCard;
+
     private PlayerHand hand;
 
     private void Awake()
@@ -31,5 +33,10 @@ public class Player : MonoBehaviour
     public void DeselectCard()
     {
         hand.DeselectCard();
+    }
+
+    public void DiscardSelectedCard()
+    {
+        hand.DiscardSelectedCard();
     }
 }

@@ -44,4 +44,10 @@ public class PlayerHand : Hand<RepairCard, RepairCardAsset>
             selectedCard = null;
         }
     }
+
+    public void DiscardSelectedCard()
+    {
+        RemoveCard(selectedCard);
+        DeselectCard();
+    }
 }

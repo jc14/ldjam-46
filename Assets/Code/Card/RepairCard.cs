@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class RepairCard : Card<RepairCardAsset>
 {
+    public int RepairAmount => asset.RepairAmount;
+
     private PlayerHand hand;
 
     public void SetPlayerHand(PlayerHand hand)
@@ -30,5 +32,10 @@ public class RepairCard : Card<RepairCardAsset>
     protected override void OnRightClick()
     {
         
+    }
+
+    public override void Initialize()
+    {
+
     }
 }

@@ -75,7 +75,8 @@ public class Board : MonoBehaviour
     {
         GameObject go = Instantiate(RepairCardPrefab);
         RepairCard newCard = go.GetComponent<RepairCard>();
-        newCard.SetAsset(repairCardFactory.GetRandomCard());
+        newCard.Setup(this, repairCardFactory.GetRandomCard());
+        newCard.Initialize();
 
         return newCard;
     }
@@ -85,8 +86,17 @@ public class Board : MonoBehaviour
     {
         GameObject go = Instantiate(BadCardPrefab);
         BadCard newCard = go.GetComponent<BadCard>();
-        newCard.SetAsset(badCardFactory.GetRandomCard());
+        newCard.Setup(this, badCardFactory.GetRandomCard());
+        newCard.Initialize();
 
         return newCard;
+    }
+
+    public void RepairBadCard(BadCard card)
+    {
+        Debug.Log("Repair!");
+        card.Repair(player.SelectedCard.RepairAmount);
+
+        player.DiscardSelectedCard();
     }
 }

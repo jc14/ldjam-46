@@ -4,15 +4,39 @@ using UnityEngine;
 
 public class BadCard : Card<BadCardAsset>
 {
-    public int Damage => asset.Damage;
+    public int Damage => remainingDamage;
+
+    private ClientHand hand;
+
+    private int remainingDamage;
+
+    public void SetClientHand(ClientHand hand)
+    {
+        this.hand = hand;
+    }
+
+    public void Repair(int amount)
+    {
+        Debug.Log($"Repairing {remainingDamage} with {amount}");
+
+        remainingDamage -= amount;
+
+        if (remainingDamage <= 0)
+            hand.RemoveCard(this);
+    }
 
     protected override void OnLeftClick()
     {
-        throw new System.NotImplementedException();
+        board.RepairBadCard(this);
     }
 
     protected override void OnRightClick()
     {
-        throw new System.NotImplementedException();
+        Debug.Log($"Right clicked! {asset.Title}");
+    }
+
+    public override void Initialize()
+    {
+        remainingDamage = asset.Damage;
     }
 }
