@@ -240,7 +240,7 @@ MonoBehaviour:
   GameManager: {fileID: 1305640268}
   RepairCardPrefab: {fileID: 5780559396880902050, guid: b13a46ac4f3b323408eccf5f170916ab,
     type: 3}
-  BadCardPrefab: {fileID: 5780559396880902050, guid: ee707e79755169a4a82012378c0742a1,
+  BadCardPrefab: {fileID: 5780559396880902050, guid: e66e469408887804288cf6299356fd1c,
     type: 3}
 --- !u!114 &58830018
 MonoBehaviour:
