@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
-    public GameObject repairCardPrefab;
+    public GameManager GameManager;
+    [Space(10)]
+    public GameObject RepairCardPrefab;
+
+    public bool IsPlayingGame { get; private set; } = false;
 
     private CardAssetFactory<RepairCardAsset> repairCardFactory;
 
@@ -17,9 +21,29 @@ public class Board : MonoBehaviour
         repairCardFactory = new CardAssetFactory<RepairCardAsset>();
     }
 
+    public void StartNewGame()
+    {
+        Debug.Log("New game bitches!!!");
+        IsPlayingGame = true;
+    }
+
+    [ContextMenu("End Game")]
+    public void EndGame()
+    {
+        IsPlayingGame = false;
+        // TODO: I think I'm setting myself up for failure here...
+        GameManager.ToggleMainMenu();
+    }
+
+    public void HandleMainMenuToggle()
+    {
+        GameManager.ToggleMainMenu();
+    }
+
+    [ContextMenu("Draw Repair Card")]
     public void DrawRepairCard()
     {
-        GameObject go = Instantiate(repairCardPrefab);
+        GameObject go = Instantiate(RepairCardPrefab);
         RepairCard newCard = go.GetComponent<RepairCard>();
         newCard.SetAsset(repairCardFactory.GetRandomCard());
 
