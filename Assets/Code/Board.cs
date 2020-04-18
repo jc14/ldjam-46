@@ -7,18 +7,23 @@ public class Board : MonoBehaviour
     public GameManager GameManager;
     [Space(10)]
     public GameObject RepairCardPrefab;
+    public GameObject BadCardPrefab;
 
     public bool IsPlayingGame { get; private set; } = false;
 
     private CardAssetFactory<RepairCardAsset> repairCardFactory;
+    private CardAssetFactory<BadCardAsset> badCardFactory;
 
-    private Hand hand;
+    private Hand playerHand;
+    private BadHand badHand;
 
     private void Awake()
     {
-        hand = GetComponentInChildren<Hand>();
+        playerHand = GetComponentInChildren<Hand>();
+        badHand = GetComponentInChildren<BadHand>();
 
         repairCardFactory = new CardAssetFactory<RepairCardAsset>();
+        badCardFactory = new CardAssetFactory<BadCardAsset>();
     }
 
     public void StartNewGame()
@@ -47,6 +52,16 @@ public class Board : MonoBehaviour
         RepairCard newCard = go.GetComponent<RepairCard>();
         newCard.SetAsset(repairCardFactory.GetRandomCard());
 
-        hand.AddCard(newCard);
+        playerHand.AddCard(newCard);
+    }
+
+    [ContextMenu("Draw Bad Card")]
+    public void DrawBadCard()
+    {
+        GameObject go = Instantiate(BadCardPrefab);
+        BadCard newCard = go.GetComponent<BadCard>();
+        newCard.SetAsset(badCardFactory.GetRandomCard());
+
+        badHand.AddCard(newCard);
     }
 }

@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hand : MonoBehaviour
+public class PlayArea<TCard, TAsset> : MonoBehaviour where TCard : Card<TAsset> where TAsset : CardAsset
 {
-    private List<RepairCard> cards;
+    private List<TCard> cards;
 
     private void Awake()
     {
-        cards = new List<RepairCard>();
+        cards = new List<TCard>();
     }
 
-    public void AddCard(RepairCard card)
+    public void AddCard(TCard card)
     {
         cards.Add(card);
         card.transform.SetParent(transform);
-        card.SetHand(this);
     }
 }

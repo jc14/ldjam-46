@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepairCard : Card<RepairCardAsset>
+public class BadCard : Card<BadCardAsset>
 {
+    
 }

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class Card<T> : MonoBehaviour where T : CardAsset
 {
+    public T asset;
+
     public TMP_Text titleText;
     public TMP_Text descriptionText;
 
@@ -12,5 +14,16 @@ public class Card : MonoBehaviour
     {
         titleText.text = title;
         descriptionText.text = description;
+    }
+
+    public void SetAsset(T asset)
+    {
+        this.asset = asset;
+        Render();
+    }
+
+    private void Render()
+    {
+        Render(asset.Title, asset.Description);
     }
 }
