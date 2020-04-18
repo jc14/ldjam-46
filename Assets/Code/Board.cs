@@ -6,6 +6,8 @@ public class Board : MonoBehaviour
 {
     public GameManager GameManager;
     [Space(10)]
+    public ClientSettings clientSettings;
+    [Space(10)]
     public GameObject RepairCardPrefab;
     public GameObject BadCardPrefab;
 
@@ -35,8 +37,8 @@ public class Board : MonoBehaviour
         IsPlayingGame = true;
 
         playerHand.Setup(this);
-        client1.Setup(this);
-        client2.Setup(this);
+        client1.Setup(this, clientSettings);
+        client2.Setup(this, clientSettings);
 
         StartRound();
     }

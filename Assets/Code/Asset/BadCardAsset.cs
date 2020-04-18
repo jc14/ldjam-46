@@ -5,5 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Card/BadCard")]
 public class BadCardAsset : CardAsset
 {
-    [SerializeField] private int damageAmount;
+    [SerializeField] private int damage;
+    public int Damage => damage;
 }

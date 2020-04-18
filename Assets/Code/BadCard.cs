@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class BadCard : Card<BadCardAsset>
 {
-    
+    public int Damage => asset.Damage;
 }
