@@ -38,4 +38,9 @@ public class RepairCard : Card<RepairCardAsset>
     {
 
     }
+
+    protected override void OnRender()
+    {
+
+    }
 }

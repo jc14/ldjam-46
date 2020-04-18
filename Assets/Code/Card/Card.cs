@@ -41,23 +41,21 @@ public abstract class Card<T> : MonoBehaviour, IPointerClickHandler where T : Ca
         Render();
     }
 
-    public void Render(string title, string description)
-    {
-        titleText.text = title;
-        descriptionText.text = description;
-    }
-
     public void Delete()
     {
         Destroy(gameObject);
     }
 
-    private void Render()
+    protected void Render()
     {
-        Render(asset.Title, asset.Description);
+        titleText.text = asset.Title;
+        descriptionText.text = asset.Description;
+
+        OnRender();
     }
 
     public abstract void Initialize();
     protected abstract void OnLeftClick();
     protected abstract void OnRightClick();
+    protected abstract void OnRender();
 }

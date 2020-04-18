@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BadCard : Card<BadCardAsset>
 {
+    public TMP_Text DamageText;
+
     public int Damage => remainingDamage;
 
     private ClientHand hand;
@@ -23,6 +26,8 @@ public class BadCard : Card<BadCardAsset>
 
         if (remainingDamage <= 0)
             hand.RemoveCard(this);
+
+        Render();
     }
 
     protected override void OnLeftClick()
@@ -38,5 +43,12 @@ public class BadCard : Card<BadCardAsset>
     public override void Initialize()
     {
         remainingDamage = asset.Damage;
+
+        Render();
+    }
+
+    protected override void OnRender()
+    {
+        DamageText.text = remainingDamage.ToString();
     }
 }
