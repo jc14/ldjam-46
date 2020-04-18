@@ -18,7 +18,7 @@ public class RepairCard : Card
         this.hand = hand;
     }
 
-    private void SetAsset(RepairCardAsset asset)
+    public void SetAsset(RepairCardAsset asset)
     {
         this.asset = asset;
         Render();

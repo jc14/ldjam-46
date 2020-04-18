@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
+    public GameObject repairCardPrefab;
+
     private CardAssetFactory<RepairCardAsset> repairCardFactory;
 
     private Hand hand;
@@ -17,6 +19,10 @@ public class Board : MonoBehaviour
 
     public void DrawRepairCard()
     {
-        //hand.AddCard();
+        GameObject go = Instantiate(repairCardPrefab);
+        RepairCard newCard = go.GetComponent<RepairCard>();
+        newCard.SetAsset(repairCardFactory.GetRandomCard());
+
+        hand.AddCard(newCard);
     }
 }

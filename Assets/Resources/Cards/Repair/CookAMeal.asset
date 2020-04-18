@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnabled: 1
   title: Cook a Meal
-  description: 
+  description: Cook a lovely meal for your SO. Hopefully this will help her forgive
+    you. Doubt.
   repairAmount: 0
