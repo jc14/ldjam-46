@@ -15,6 +15,6 @@ MonoBehaviour:
   isEnabled: 1
   title: Killed Cat
   description: '{c} stuffed {l}''s cat into the freezing after feeding it antihistamines
-    to put it out of it''s misery. {c} did sing {l}''s cat it''s favorite song, so
-    there''s that.'
+    to put it out of it''s misery. {c} did sing the cat it''s favorite song first,
+    so there''s that.'
   damage: 10
