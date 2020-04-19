@@ -35,6 +35,6 @@ public class ClientHand : Hand<BadCard, BadCardAsset>
 
     protected override int GetMaxCardsCount()
     {
-        return 3;
+        return 2;
     }
 }

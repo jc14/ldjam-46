@@ -23,6 +23,7 @@ public class PlayerHand : Hand<RepairCard, RepairCardAsset>
     public override void StartTurn()
     {
         DrawNewCard();
+        DrawNewCard();
     }
 
     public void SelectCard(RepairCard card)
@@ -58,6 +59,6 @@ public class PlayerHand : Hand<RepairCard, RepairCardAsset>
 
     protected override int GetMaxCardsCount()
     {
-        return 7;
+        return 6;
     }
 }
