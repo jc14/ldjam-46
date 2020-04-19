@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnabled: 1
   title: Apologize
-  description: Tell them you're sorry you mother fucker.
-  repairAmount: 3
+  description: Tell them you're sorry. And you better mean, dickhead.
+  repairAmount: 5

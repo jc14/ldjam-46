@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fb4f5b364d6b21418dc645eb99c7874, type: 3}
-  m_Name: SweetText
+  m_Name: PassionateKiss
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  title: Send a Sweet Text
-  description: Send them a sweet text. Tell them how much you love them.
-  repairAmount: 1
+  isEnabled: 0
+  title: Kiss Passionately
+  description: Grab their face, with both hands, and stare romantically into their
+    eyes for a few seconds. Then, let 'em have it.
+  repairAmount: 3

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
+  m_Name: APrankTooFar
+  m_EditorClassIdentifier: 
+  isEnabled: 0
+  title: A Prank Too Far
+  description: '{c} filled {l} shampoo with blue dye. {l}''s whole body turned blue.
+    {l} had an important interview the next day. So pissed! Like you wouldn''t believe!'
+  damage: 6

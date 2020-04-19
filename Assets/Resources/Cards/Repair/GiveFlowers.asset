@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnabled: 1
   title: Give Flowers
-  description: 
+  description: Buy a bouquet of their favorite flowers.
   repairAmount: 2

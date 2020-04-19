@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fb4f5b364d6b21418dc645eb99c7874, type: 3}
-  m_Name: SweetText
+  m_Name: Alcohol
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  title: Send a Sweet Text
-  description: Send them a sweet text. Tell them how much you love them.
-  repairAmount: 1
+  isEnabled: 0
+  title: Buy Them Alcohol
+  description: Buy them their favorite alcoholic drink. Make sure they drink a lot
+    of it. It's best to forget what you did.
+  repairAmount: 3
