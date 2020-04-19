@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DrunkWithFriends
   m_EditorClassIdentifier: 
   isEnabled: 1
-  title: Got Drunk With Friends
+  title: Got Drunk with Friends
   description: '{c} came home completely wasted and {l} had to nurse {c} back to
     health. Vomit everywhere...'
   damage: 4

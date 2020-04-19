@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4f5b364d6b21418dc645eb99c7874, type: 3}
   m_Name: TakeOnVacation
   m_EditorClassIdentifier: 
-  isEnabled: 0
-  title: Take On Vacation
+  isEnabled: 1
+  title: Take on Vacation
   description: Go to a nice resort in a far away land. Not the Motel 6 across the
     street, you dumbass.
   repairAmount: 6

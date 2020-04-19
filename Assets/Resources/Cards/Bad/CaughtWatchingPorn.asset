@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
   m_Name: CaughtWatchingPorn
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Caught Watching Porn
   description: "{l} walked in on {c} watching pornographic films! Now {l} is feeling
     insecure about their body. Maybe {c} should suggest making their own film. \U0001F609;)"

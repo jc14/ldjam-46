@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
   m_Name: NeverShowedForDate
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Never Showed Up For Date
   description: '{c} completely forgot about their date with {l}. {l} sat in the restaurant
     for two hours!'

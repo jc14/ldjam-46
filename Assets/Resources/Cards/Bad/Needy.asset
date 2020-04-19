@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
   m_Name: Needy
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Being Too Needy
   description: '{c} is being a needy little bitch and {l} is done with it. {l} can''t
     even right now.'

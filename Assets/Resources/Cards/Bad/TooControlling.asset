@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
   m_Name: TooControlling
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Too Controlling
   description: '{c} won''t let {l} do anything fun. {c} keeps {l} locked away in
     the house watching Netflix all day long. {l} can only take so much Netflix and

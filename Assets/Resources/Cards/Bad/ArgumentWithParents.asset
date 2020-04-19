@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
   m_Name: ArgumentWithParents
   m_EditorClassIdentifier: 
-  isEnabled: 0
-  title: Argued With Parent
+  isEnabled: 1
+  title: Argued with Parent
   description: While at dinner with {l}'s parents, {c} got into a heated argument
     about politics with {l}'s dad. {c} called him a nincompoop.
   damage: 2

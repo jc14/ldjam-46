@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
   m_Name: DrunkSlapAss
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Got Drunk and Spanked Hottie
   description: '{c}, while totally wasted, spanked a total hottie in front of {l}.
     {c} has more to worry about than the sexual harassment suit, if you get what

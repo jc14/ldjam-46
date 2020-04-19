@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
   m_Name: ForgotRelationshipMilestone
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Forgot Relationship Milestone
   description: '{c} forgot to celebrate an important relationship milestone with
     {l}. Come on {c}, do you not have a calendar?'

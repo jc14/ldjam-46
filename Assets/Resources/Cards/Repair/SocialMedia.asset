@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4f5b364d6b21418dc645eb99c7874, type: 3}
   m_Name: SocialMedia
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Post on Social Media
   description: Write a nice post on social media, I think it's call CheekPage, about
     how great they are. Really lay it on thick.

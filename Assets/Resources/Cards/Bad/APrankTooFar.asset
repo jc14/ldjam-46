@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
   m_Name: APrankTooFar
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: A Prank Too Far
-  description: '{c} filled {l} shampoo with blue dye. {l}''s whole body turned blue.
-    {l} had an important interview the next day. So pissed! Like you wouldn''t believe!'
+  description: '{c} filled {l}''s shampoo with blue dye. {l}''s whole body turned
+    blue. {l} had an important interview the next day. So pissed! Like you wouldn''t
+    believe!'
   damage: 6

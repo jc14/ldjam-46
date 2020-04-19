@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
   m_Name: StoleMoney
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Stolen Money
   description: '{l} found out that {c} stole their money while {l} was sleeping.
     It was only $5 but it''s the principle of the thing.'

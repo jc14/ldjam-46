@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4f5b364d6b21418dc645eb99c7874, type: 3}
   m_Name: SpaDay
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Spa Day
   description: Take them out to the spa for a day. Really pamper them.
   repairAmount: 5

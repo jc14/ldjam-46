@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4f5b364d6b21418dc645eb99c7874, type: 3}
   m_Name: ExpensiveRestaurant
   m_EditorClassIdentifier: 
-  isEnabled: 0
-  title: Take Out To Restaurant
+  isEnabled: 1
+  title: Take Out to Restaurant
   description: Take them to an expensive restaurant. Take them wherever they want
     to go. Spare no expense.
   repairAmount: 6

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4f5b364d6b21418dc645eb99c7874, type: 3}
   m_Name: PicnicInThePark
   m_EditorClassIdentifier: 
-  isEnabled: 0
-  title: Picnic In the Park
+  isEnabled: 1
+  title: Picnic in the Park
   description: Take them to the park and have a nice picnic. Make sure it's not suppose
     to rain.
   repairAmount: 4

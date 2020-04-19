@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4f5b364d6b21418dc645eb99c7874, type: 3}
   m_Name: BuyAGift
   m_EditorClassIdentifier: 
-  isEnabled: 0
-  title: Buy A Gift
+  isEnabled: 1
+  title: Buy a Gift
   description: Buy them an expensive, special gift. Something that they've been begging
     you for. Don't cheap out.
   repairAmount: 3

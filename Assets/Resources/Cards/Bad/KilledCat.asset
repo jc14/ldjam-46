@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
   m_Name: KilledCat
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Killed Cat
   description: '{c} stuffed {l}''s cat into the freezing after feeding it antihistamines
     to put it out of it''s misery. {c} did sing {l}''s cat it''s favorite song, so

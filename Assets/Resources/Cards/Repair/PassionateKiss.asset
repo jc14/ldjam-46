@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4f5b364d6b21418dc645eb99c7874, type: 3}
   m_Name: PassionateKiss
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Kiss Passionately
   description: Grab their face, with both hands, and stare romantically into their
     eyes for a few seconds. Then, let 'em have it.

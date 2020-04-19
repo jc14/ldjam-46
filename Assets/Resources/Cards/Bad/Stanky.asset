@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
   m_Name: Stanky
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Stanky!
   description: '{c} is stanky! {l} is done with it. {l} is tired of using nose plugs.
     {c} thought it was odd that {l} started sitting on the other end of the couch.'

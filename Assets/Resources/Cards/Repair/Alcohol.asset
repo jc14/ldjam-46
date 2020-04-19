@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4f5b364d6b21418dc645eb99c7874, type: 3}
   m_Name: Alcohol
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   title: Buy Them Alcohol
   description: Buy them their favorite alcoholic drink. Make sure they drink a lot
     of it. It's best to forget what you did.
