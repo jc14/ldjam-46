@@ -19,8 +19,13 @@ public abstract class Hand<TCard, TAsset> : MonoBehaviour where TCard : Card<TAs
     public void AddCard(TCard card)
     {
         if (cards.Count >= GetMaxCardsCount())
+        {
+            // 😱 🤮
+            card.Delete();
             return;
+        }
 
+        board.Audio.PlayDraw(.5f);
         cards.Add(card);
         card.transform.SetParent(cardsContent);
     }

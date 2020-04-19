@@ -15,6 +15,8 @@ public class Board : MonoBehaviour
     public int TurnsCompleted { get; private set; } = 0;
     public int CaseNumber { get; private set; }
 
+    public AudioManager Audio { get; private set; }
+
     private CardAssetFactory<RepairCardAsset> repairCardFactory;
     private CardAssetFactory<BadCardAsset> badCardFactory;
 
@@ -43,6 +45,8 @@ public class Board : MonoBehaviour
 
     private void Awake()
     {
+        Audio = GetComponentInChildren<AudioManager>();
+
         player = transform.Find("Player").GetComponent<Player>();
         client1 = transform.Find("Client 1").GetComponent<Client>();
         client2 = transform.Find("Client 2").GetComponent<Client>();
