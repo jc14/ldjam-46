@@ -18,6 +18,8 @@ public class Board : MonoBehaviour
     private CardAssetFactory<RepairCardAsset> repairCardFactory;
     private CardAssetFactory<BadCardAsset> badCardFactory;
 
+    private BoardUI boardUI;
+
     private Player player;
     private Client client1;
     private Client client2;
@@ -33,6 +35,8 @@ public class Board : MonoBehaviour
 
         repairCardFactory = new CardAssetFactory<RepairCardAsset>();
         badCardFactory = new CardAssetFactory<BadCardAsset>();
+
+        boardUI = GetComponent<BoardUI>();
     }
 
     public void StartNewGame(int caseNumber)
@@ -46,6 +50,8 @@ public class Board : MonoBehaviour
         player.Setup(this);
         client1.Setup(this, client2, clientSettings);
         client2.Setup(this, client1, clientSettings);
+
+        boardUI.OnStartNewGame();
 
         StartRound();
     }

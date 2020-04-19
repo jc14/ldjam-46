@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BoardUI : MonoBehaviour
 {
+    public CaseNumberPanel CaseNumberPanel;
     public Button EndTurnButton;
 
     private Board board;
@@ -14,6 +15,11 @@ public class BoardUI : MonoBehaviour
         board = GetComponent<Board>();
 
         EndTurnButton.onClick.AddListener(HandleEndTurn);
+    }
+
+    public void OnStartNewGame()
+    {
+        CaseNumberPanel.SetCaseNumber(board.CaseNumber);
     }
 
     private void HandleEndTurn()
