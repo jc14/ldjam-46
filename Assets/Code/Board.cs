@@ -13,6 +13,7 @@ public class Board : MonoBehaviour
 
     public bool IsPlayingGame { get; private set; } = false;
     public int TurnsCompleted { get; private set; } = 0;
+    public int CaseNumber { get; private set; }
 
     private CardAssetFactory<RepairCardAsset> repairCardFactory;
     private CardAssetFactory<BadCardAsset> badCardFactory;
@@ -34,8 +35,10 @@ public class Board : MonoBehaviour
         badCardFactory = new CardAssetFactory<BadCardAsset>();
     }
 
-    public void StartNewGame()
+    public void StartNewGame(int caseNumber)
     {
+        CaseNumber = caseNumber;
+
         Debug.Log("New game bitches!!!");
         IsPlayingGame = true;
         TurnsCompleted = 0;

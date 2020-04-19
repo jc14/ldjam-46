@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public Board Board;
     [Space(15)]
     public GameObject MainMenuPanel;
+    public NewGameScreen NewGameScreen;
     public EndGameScreen EndGameScreen;
     [Space(10)]
     public Button ContinueGameButton;
@@ -55,9 +56,22 @@ public class GameManager : MonoBehaviour
         EndGameScreen.Close();
     }
 
+    private void OpenNewGameScreen()
+    {
+        CloseAllScreens();
+
+        NewGameScreen.Open(this);
+    }
+
+    private void CloseNewGameScreen()
+    {
+        NewGameScreen.Close();
+    }
+
     private void CloseAllScreens()
     {
         CloseMainMenu();
+        CloseNewGameScreen();
         CloseEndGameScreen();
     }
 
@@ -91,8 +105,9 @@ public class GameManager : MonoBehaviour
 
     private void HandleNewGame()
     {
-        Board.StartNewGame();
         CloseAllScreens();
+
+        OpenNewGameScreen();
     }
 
     private void HandleExitGame()

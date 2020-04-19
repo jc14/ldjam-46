@@ -8,7 +8,7 @@ public class EndGameScreen : AbstractScreen
     public TMP_Text DescriptionText;
     public Button ReturnToMainMenuButton;
 
-    private const string prefixText = "This horrible relationship finally comes to an end. You did as well as anyone in this position would have done, I guess. Cupid Arrow Inc. thanks you for your work, but your pay will be deducted. Cases fail but the company would rather no cases to fail, so, what can we do. Anyways, continue working.";
+    private const string prefixText = "This horrible relationship finally comes to an end. You did as well as anyone in this position would have done, I guess. Cupid's Arrow Inc.™ Difficult Cases Division thanks you for your work, however, we can't compensate for failed cases. Cases fail but the company would rather no cases to fail, so, what can we do. Anyways, continue working.";
 
     private const string oneSidedBreakUp = "{l} can only take so much. {l} finally worked up the courage and ended it with {c}. If {c} could get their shit together then maybe the relationship could have continued. I guess we'll never know.";
 
