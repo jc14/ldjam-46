@@ -6,6 +6,8 @@ public class NewGameScreen : AbstractScreen
 {
     public TMP_Text CaseNumberText;
     public TMP_Text DescriptionText;
+    public TMP_InputField Client1NameInputField;
+    public TMP_InputField Client2NameInputField;
     public Button StartCaseButton;
 
     private Board board;
@@ -16,6 +18,8 @@ public class NewGameScreen : AbstractScreen
     private void Awake()
     {
         StartCaseButton.onClick.AddListener(HandleStartCase);
+        Client1NameInputField.onValueChanged.AddListener(HandleClient1NameTextChange);
+        Client2NameInputField.onValueChanged.AddListener(HandleClient2NameTextChange);
     }
 
     protected override void UpdateScreen(Board board)
@@ -32,5 +36,22 @@ public class NewGameScreen : AbstractScreen
     {
         board.StartNewGame(caseNumber);
         Close();
+    }
+
+    private void HandleClient1NameTextChange(string name)
+    {
+        HandleClientNameChange(board.Client1, name, Client1NameInputField);
+    }
+
+    private void HandleClient2NameTextChange(string name)
+    {
+        HandleClientNameChange(board.Client2, name, Client2NameInputField);
+    }
+
+    private void HandleClientNameChange(Client client, string name, TMP_InputField inputField)
+    {
+        client.SetFirstName(name);
+
+        inputField.text = client.FirstName;
     }
 }

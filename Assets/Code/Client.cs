@@ -62,4 +62,17 @@ public class Client : MonoBehaviour
 
         ui.Render(this);
     }
+
+    public void SetFirstName(string name)
+    {
+        int maxLength = 25;
+
+        if (name.Length > maxLength)
+        {
+            firstName = name.Substring(0, maxLength);
+            return;
+        }
+
+        firstName = name;
+    }
 }
