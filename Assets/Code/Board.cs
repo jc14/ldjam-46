@@ -62,7 +62,9 @@ public class Board : MonoBehaviour
 
     public void EndRound()
     {
-        Debug.Log("End round bitches!!!");
+        // TODO: Add end round logic to check if game is over.
+
+        StartRound();
     }
 
     public void HandleMainMenuToggle()
