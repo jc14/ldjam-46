@@ -28,8 +28,14 @@ public class PlayerHand : Hand<RepairCard, RepairCardAsset>
 
     public void SelectCard(RepairCard card)
     {
+        // Trying to select the same card.
+        if (selectedCard == card)
+            return;
+
         if (selectedCard != null)
             DeselectCard();
+
+        board.Audio.PlaySelectPlayer();
 
         selectedCard = card;
         card.Select();
@@ -39,6 +45,8 @@ public class PlayerHand : Hand<RepairCard, RepairCardAsset>
     {
         if (selectedCard != null)
         {
+            board.Audio.PlayDeselectPlayer();
+
             selectedCard.Deselect();
             selectedCard = null;
         }

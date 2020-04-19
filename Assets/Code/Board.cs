@@ -142,6 +142,7 @@ public class Board : MonoBehaviour
         Debug.Log("Repair!");
         card.Repair(player.SelectedCard.RepairAmount);
 
+        Audio.PlayPlacePlayer();
         player.DiscardSelectedCard();
     }
 }

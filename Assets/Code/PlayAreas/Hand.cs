@@ -25,13 +25,14 @@ public abstract class Hand<TCard, TAsset> : MonoBehaviour where TCard : Card<TAs
             return;
         }
 
-        board.Audio.PlayDraw(.5f);
+        board.Audio.PlayDraw(.7f);
         cards.Add(card);
         card.transform.SetParent(cardsContent);
     }
 
     public void RemoveCard(TCard card)
     {
+        board.Audio.PlayDiscardPlayer();
         cards.Remove(card);
         card.Delete();
     }
