@@ -24,6 +24,20 @@ public class Board : MonoBehaviour
     private Client client1;
     private Client client2;
 
+    private Tutorial tutorial;
+
+    public bool IsTutorialActive
+    {
+        get
+        {
+            return tutorial.IsActive;
+        }
+        set
+        {
+            tutorial.IsActive = value;
+        }
+    }
+
     public Client Client1 => client1;
     public Client Client2 => client2;
 
@@ -37,6 +51,7 @@ public class Board : MonoBehaviour
         badCardFactory = new CardAssetFactory<BadCardAsset>();
 
         boardUI = GetComponent<BoardUI>();
+        tutorial = GetComponent<Tutorial>();
     }
 
     public void StartNewGame(int caseNumber)
@@ -52,6 +67,8 @@ public class Board : MonoBehaviour
         client2.Setup(this, client1, clientSettings);
 
         boardUI.OnStartNewGame();
+
+        tutorial.Display(IsTutorialActive);
 
         StartRound();
     }

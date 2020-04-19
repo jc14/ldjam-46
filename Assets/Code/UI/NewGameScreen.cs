@@ -6,6 +6,7 @@ public class NewGameScreen : AbstractScreen
 {
     public TMP_Text CaseNumberText;
     public TMP_Text DescriptionText;
+    public Toggle TutorialToggle;
     public TMP_InputField Client1NameInputField;
     public TMP_InputField Client2NameInputField;
     public Button StartCaseButton;
@@ -17,6 +18,7 @@ public class NewGameScreen : AbstractScreen
 
     private void Awake()
     {
+        TutorialToggle.onValueChanged.AddListener(HandleTutorialToggle);
         StartCaseButton.onClick.AddListener(HandleStartCase);
         Client1NameInputField.onValueChanged.AddListener(HandleClient1NameTextChange);
         Client2NameInputField.onValueChanged.AddListener(HandleClient2NameTextChange);
@@ -28,6 +30,8 @@ public class NewGameScreen : AbstractScreen
 
         this.board = board;
 
+        TutorialToggle.isOn = board.IsTutorialActive;
+
         CaseNumberText.text = "Case " + caseNumber;
         DescriptionText.text = descriptionText;
     }
@@ -36,6 +40,11 @@ public class NewGameScreen : AbstractScreen
     {
         board.StartNewGame(caseNumber);
         Close();
+    }
+
+    private void HandleTutorialToggle(bool value)
+    {
+        board.IsTutorialActive = value;
     }
 
     private void HandleClient1NameTextChange(string name)

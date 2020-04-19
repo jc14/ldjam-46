@@ -6,11 +6,16 @@ public abstract class AbstractScreen : MonoBehaviour
 
     public void Open(GameManager gameManager)
     {
-        gameObject.SetActive(true);
+        OpenScreen();
         UpdateScreen(gameManager.Board);
 
         if (this.gameManager == null)
             this.gameManager = gameManager;
+    }
+
+    public void OpenScreen()
+    {
+        gameObject.SetActive(true);
     }
 
     public void Close()
