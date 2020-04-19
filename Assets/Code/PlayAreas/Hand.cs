@@ -18,6 +18,9 @@ public abstract class Hand<TCard, TAsset> : MonoBehaviour where TCard : Card<TAs
 
     public void AddCard(TCard card)
     {
+        if (cards.Count >= GetMaxCardsCount())
+            return;
+
         cards.Add(card);
         card.transform.SetParent(cardsContent);
     }
@@ -46,4 +49,5 @@ public abstract class Hand<TCard, TAsset> : MonoBehaviour where TCard : Card<TAs
 
     public abstract void Setup(Board board);
     public abstract void StartTurn();
+    protected abstract int GetMaxCardsCount();
 }

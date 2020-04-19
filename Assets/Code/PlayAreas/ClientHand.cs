@@ -32,4 +32,9 @@ public class ClientHand : Hand<BadCard, BadCardAsset>
         AddCard(newCard);
         newCard.SetClientHand(this);
     }
+
+    protected override int GetMaxCardsCount()
+    {
+        return 3;
+    }
 }

@@ -50,4 +50,9 @@ public class PlayerHand : Hand<RepairCard, RepairCardAsset>
         RemoveCard(selectedCard);
         DeselectCard();
     }
+
+    protected override int GetMaxCardsCount()
+    {
+        return 8;
+    }
 }
