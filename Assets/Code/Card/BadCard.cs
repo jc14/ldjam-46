@@ -39,14 +39,6 @@ public class BadCard : Card<BadCardAsset>
         Render();
     }
 
-    private string ParseAndReplaceTemplate(string description)
-    {
-        string result = description;
-        result = result.Replace("{l}", client.Lover.FirstName);
-        result = result.Replace("{c}", client.FirstName);
-        return result;
-    }
-
     protected override void OnLeftClick()
     {
         board.RepairBadCard(this);
@@ -62,6 +54,6 @@ public class BadCard : Card<BadCardAsset>
         DamageText.text = remainingDamage.ToString();
 
         if (client != null)
-            DescriptionText.text = ParseAndReplaceTemplate(asset.Description);
+            DescriptionText.text = StringTemplate.ParseAndReplaceTemplate(asset.Description, client, client.Lover);
     }
 }

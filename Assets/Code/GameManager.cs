@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -7,6 +6,7 @@ public class GameManager : MonoBehaviour
     public Board Board;
     [Space(15)]
     public GameObject MainMenuPanel;
+    public EndGameScreen EndGameScreen;
     [Space(10)]
     public Button ContinueGameButton;
     public Button NewGameButton;
@@ -43,8 +43,28 @@ public class GameManager : MonoBehaviour
             OpenMainMenu();
     }
 
+    public void OpenEndGameScreen()
+    {
+        CloseAllScreens();
+
+        EndGameScreen.Open(this);
+    }
+
+    private void CloseEndGameScreen()
+    {
+        EndGameScreen.Close();
+    }
+
+    private void CloseAllScreens()
+    {
+        CloseMainMenu();
+        CloseEndGameScreen();
+    }
+
     private void OpenMainMenu()
     {
+        CloseAllScreens();
+
         if (Board.IsPlayingGame)
         {
             ContinueGameButton.interactable = true;
@@ -72,7 +92,7 @@ public class GameManager : MonoBehaviour
     private void HandleNewGame()
     {
         Board.StartNewGame();
-        CloseMainMenu();
+        CloseAllScreens();
     }
 
     private void HandleExitGame()

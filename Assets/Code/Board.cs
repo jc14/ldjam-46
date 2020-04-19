@@ -12,6 +12,7 @@ public class Board : MonoBehaviour
     public GameObject BadCardPrefab;
 
     public bool IsPlayingGame { get; private set; } = false;
+    public int TurnsCompleted { get; private set; } = 0;
 
     private CardAssetFactory<RepairCardAsset> repairCardFactory;
     private CardAssetFactory<BadCardAsset> badCardFactory;
@@ -19,6 +20,9 @@ public class Board : MonoBehaviour
     private Player player;
     private Client client1;
     private Client client2;
+
+    public Client Client1 => client1;
+    public Client Client2 => client2;
 
     private void Awake()
     {
@@ -34,6 +38,7 @@ public class Board : MonoBehaviour
     {
         Debug.Log("New game bitches!!!");
         IsPlayingGame = true;
+        TurnsCompleted = 0;
 
         player.Setup(this);
         client1.Setup(this, client2, clientSettings);
@@ -42,13 +47,11 @@ public class Board : MonoBehaviour
         StartRound();
     }
 
-    [ContextMenu("End Game")]
     public void EndGame()
     {
         Debug.Log("Game over bitches!!!");
         IsPlayingGame = false;
-        // TODO: I think I'm setting myself up for failure here...
-        GameManager.ToggleMainMenu();
+        GameManager.OpenEndGameScreen();
     }
 
     public void StartRound()
@@ -62,7 +65,17 @@ public class Board : MonoBehaviour
 
     public void EndRound()
     {
-        // TODO: Add end round logic to check if game is over.
+        client1.EndTurn();
+        client2.EndTurn();
+
+        // You have lost. The case is terminated and the company is very displeased.
+        if (client1.RelationshipHealth <= 0 || client2.RelationshipHealth <= 0)
+        {
+            EndGame();
+            return;
+        }
+
+        TurnsCompleted++;
 
         StartRound();
     }

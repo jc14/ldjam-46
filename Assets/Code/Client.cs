@@ -45,8 +45,10 @@ public class Client : MonoBehaviour
     public void StartTurn()
     {
         hand.StartTurn();
+    }
 
-        // TODO: Loop over cards and apply damage
+    public void EndTurn()
+    {
         foreach (BadCard card in hand.GetCards())
         {
             lover.ApplyDamage(card.Damage);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClientHand : Hand<BadCard, BadCardAsset>
 {
-    [SerializeField] private int cardsToDrawEachRound;
+    [SerializeField] private int cardsToDrawEachRound = 1;
 
     private Client client;
 
