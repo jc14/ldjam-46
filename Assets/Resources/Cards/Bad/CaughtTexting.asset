@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnabled: 1
   title: Caught Texting Another
-  description: Your client caught the other texting another romantic interest.
-  damage: 5
+  description: '{l} caught {c} texting another person romatically. {l} really can''t
+    respect {c}''s privacy, huh?'
+  damage: 3

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnabled: 1
   title: Ignored Phone Call
-  description: The client ignored their lover's phone call. Pretty rude.
+  description: '{c} ignored a phone call from {l}. In {c}''s defense, {l} calls like
+    everyday.'
   damage: 1

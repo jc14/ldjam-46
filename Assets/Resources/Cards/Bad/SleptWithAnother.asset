@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c038bce69368f4e88c4ac456c61692, type: 3}
   m_Name: SleptWithAnother
   m_EditorClassIdentifier: 
-  isEnabled: 0
-  title: 
-  description: 
-  damage: 0
+  isEnabled: 1
+  title: Caught Sleeping With Someone Else
+  description: '{c} actually slept with another person and {l} found out! {l is livid.
+    Can you blame {l}?'
+  damage: 10

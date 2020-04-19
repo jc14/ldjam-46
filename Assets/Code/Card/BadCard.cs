@@ -42,8 +42,8 @@ public class BadCard : Card<BadCardAsset>
     private string ParseAndReplaceTemplate(string description)
     {
         string result = description;
-        result = result.Replace("{lover}", client.Lover.FirstName);
-        result = result.Replace("{client}", client.FirstName);
+        result = result.Replace("{l}", client.Lover.FirstName);
+        result = result.Replace("{c}", client.FirstName);
         return result;
     }
 
