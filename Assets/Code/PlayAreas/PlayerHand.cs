@@ -16,15 +16,13 @@ public class PlayerHand : Hand<RepairCard, RepairCardAsset>
 
         for (int i = 0; i < cardsToStart; i++)
         {
-            RepairCard newCard = board.DrawRepairCard();
-            AddCard(newCard);
-            newCard.SetPlayerHand(this);
+            DrawNewCard();
         }
     }
 
     public override void StartTurn()
     {
-        
+        DrawNewCard();
     }
 
     public void SelectCard(RepairCard card)
@@ -51,8 +49,15 @@ public class PlayerHand : Hand<RepairCard, RepairCardAsset>
         DeselectCard();
     }
 
+    private void DrawNewCard()
+    {
+        RepairCard newCard = board.DrawRepairCard();
+        AddCard(newCard);
+        newCard.SetPlayerHand(this);
+    }
+
     protected override int GetMaxCardsCount()
     {
-        return 8;
+        return 7;
     }
 }
