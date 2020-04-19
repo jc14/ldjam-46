@@ -6,11 +6,18 @@ using UnityEngine;
 public class ClientUI : MonoBehaviour
 {
     public TMP_Text ClientNameText;
-    public RelationshipBarUI relationshipBar;
+    public ClusterHealthUI clusterHealthUI;
+
+    public void Setup(Client client)
+    {
+        clusterHealthUI.Setup(client);
+
+        Render(client);
+    }
 
     public void Render(Client client)
     {
         ClientNameText.text = client.FirstName;
-        relationshipBar.Render(client);
+        clusterHealthUI.Render(client);
     }
 }

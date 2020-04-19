@@ -7,8 +7,9 @@ public class Client : MonoBehaviour
     [SerializeField] private string firstName;
     public string FirstName => firstName;
 
-    private float relationshipHealth;
-    public float RelationshipHealth => relationshipHealth / settings.HealthPoints;
+    private int relationshipHealth;
+    public int RelationshipHealth => relationshipHealth;
+    public int MaxHealth => settings.HealthPoints;
 
     private ClientSettings settings;
     private ClientHand hand;
@@ -29,12 +30,12 @@ public class Client : MonoBehaviour
         this.lover = lover;
         this.settings = settings;
 
-        relationshipHealth = settings.HealthPoints;
+        relationshipHealth = MaxHealth;
 
         hand.Setup(board);
         hand.SetClient(this);
 
-        ui.Render(this);
+        ui.Setup(this);
     }
 
     public void CleanUp()
