@@ -518,8 +518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efafb5ac547cdcf4094f76c87b781e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleText: {fileID: 5760108483881494536}
-  descriptionText: {fileID: 2557339868192857455}
+  TitleText: {fileID: 5760108483881494536}
+  DescriptionText: {fileID: 2557339868192857455}
   DamageText: {fileID: 5014951510935371026}
 --- !u!1 &6099262588199772121
 GameObject:

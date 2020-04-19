@@ -17,14 +17,19 @@ public class ClientHand : Hand<BadCard, BadCardAsset>
     {
         for (int i = 0; i < cardsToDrawEachRound; i++)
         {
-            BadCard newCard = board.DrawBadCard();
-            AddCard(newCard);
-            newCard.SetClientHand(this);
+            DrawCardToHand();
         }
     }
 
     public void SetClient(Client client)
     {
         this.client = client;
+    }
+
+    private void DrawCardToHand()
+    {
+        BadCard newCard = board.DrawBadCard(client);
+        AddCard(newCard);
+        newCard.SetClientHand(this);
     }
 }

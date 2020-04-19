@@ -6,8 +6,8 @@ using UnityEngine.EventSystems;
 
 public abstract class Card<T> : MonoBehaviour, IPointerClickHandler where T : CardAsset
 {
-    public TMP_Text titleText;
-    public TMP_Text descriptionText;
+    public TMP_Text TitleText;
+    public TMP_Text DescriptionText;
 
     protected T asset;
 
@@ -48,13 +48,12 @@ public abstract class Card<T> : MonoBehaviour, IPointerClickHandler where T : Ca
 
     protected void Render()
     {
-        titleText.text = asset.Title;
-        descriptionText.text = asset.Description;
+        TitleText.text = asset.Title;
+        DescriptionText.text = asset.Description;
 
         OnRender();
     }
 
-    public abstract void Initialize();
     protected abstract void OnLeftClick();
     protected abstract void OnRightClick();
     protected abstract void OnRender();

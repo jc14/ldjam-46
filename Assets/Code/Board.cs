@@ -84,12 +84,12 @@ public class Board : MonoBehaviour
     }
 
     [ContextMenu("Draw Bad Card")]
-    public BadCard DrawBadCard()
+    public BadCard DrawBadCard(Client target)
     {
         GameObject go = Instantiate(BadCardPrefab);
         BadCard newCard = go.GetComponent<BadCard>();
         newCard.Setup(this, badCardFactory.GetRandomCard());
-        newCard.Initialize();
+        newCard.Initialize(target);
 
         return newCard;
     }

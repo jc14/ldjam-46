@@ -14,6 +14,7 @@ public class Client : MonoBehaviour
     private ClientHand hand;
     private ClientUI ui;
     private Client lover;
+    public Client Lover => lover;
 
     private void Awake()
     {

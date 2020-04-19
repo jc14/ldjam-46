@@ -27,6 +27,11 @@ public class RepairCard : Card<RepairCardAsset>
         animator.SetBool("IsSelected", false);
     }
 
+    public void Initialize()
+    {
+
+    }
+
     protected override void OnLeftClick()
     {
         hand.SelectCard(this);
@@ -35,11 +40,6 @@ public class RepairCard : Card<RepairCardAsset>
     protected override void OnRightClick()
     {
         
-    }
-
-    public override void Initialize()
-    {
-
     }
 
     protected override void OnRender()
