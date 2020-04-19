@@ -1,17 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 using TMPro;
-using UnityEngine;
 using UnityEngine.UI;
 
-public class EndGameScreen : MonoBehaviour
+public class EndGameScreen : AbstractScreen
 {
     public TMP_Text ResultText;
     public TMP_Text DescriptionText;
     public Button ReturnToMainMenuButton;
-
-    private GameManager gameManager;
 
     private const string prefixText = "This horrible relationship finally comes to an end. You did as well as anyone in this position would have done, I guess. Cupid Arrow Inc. thanks you for your work, but your pay will be deducted. Cases fail but the company would rather no cases to fail, so, what can we do. Anyways, continue working.";
 
@@ -24,21 +19,7 @@ public class EndGameScreen : MonoBehaviour
         ReturnToMainMenuButton.onClick.AddListener(HandleReturnToMainMenu);
     }
 
-    public void Open(GameManager gameManager)
-    {
-        gameObject.SetActive(true);
-        UpdateScreen(gameManager.Board);
-
-        if (this.gameManager == null)
-            this.gameManager = gameManager;
-    }
-
-    public void Close()
-    {
-        gameObject.SetActive(false);
-    }
-
-    public void UpdateScreen(Board board)
+    protected override void UpdateScreen(Board board)
     {
         ResultText.text = $"Relationship Lasted {board.TurnsCompleted} Turns";
 
