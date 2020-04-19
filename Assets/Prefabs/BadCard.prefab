@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 5780559396880902053}
   - component: {fileID: 5780559396880902055}
   - component: {fileID: 6503937493730543774}
+  - component: {fileID: 8581679657450503451}
   m_Layer: 5
   m_Name: BadCard
   m_TagString: Untagged
@@ -523,6 +524,25 @@ MonoBehaviour:
   TitleText: {fileID: 5760108483881494536}
   DescriptionText: {fileID: 2557339868192857455}
   DamageText: {fileID: 5014951510935371026}
+--- !u!95 &8581679657450503451
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5780559396880902050}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 70efc78a754959d40a766a3672d6e905, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6099262588199772121
 GameObject:
   m_ObjectHideFlags: 0
