@@ -16,4 +16,4 @@ MonoBehaviour:
   title: Ignored Phone Call
   description: '{c} ignored a phone call from {l}. In {c}''s defense, {l} calls like
     everyday.'
-  damage: 1
+  damage: 3

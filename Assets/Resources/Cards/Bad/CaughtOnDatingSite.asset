@@ -16,4 +16,4 @@ MonoBehaviour:
   title: Caught on Dating Site
   description: '{l} found {c} on a popular dating site, common among the youths.
     Why was {l} even looking in the first place? Suspect.'
-  damage: 4
+  damage: 5

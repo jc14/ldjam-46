@@ -16,4 +16,4 @@ MonoBehaviour:
   title: Argued with Parent
   description: While at dinner with {l}'s parents, {c} got into a heated argument
     about politics with {l}'s dad. {c} called him a nincompoop.
-  damage: 2
+  damage: 3

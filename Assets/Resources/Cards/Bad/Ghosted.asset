@@ -16,4 +16,4 @@ MonoBehaviour:
   title: Ghosted
   description: '{c} is completely ghosting {l}. It''s going to be hard to fix this
     one...'
-  damage: 10
+  damage: 14

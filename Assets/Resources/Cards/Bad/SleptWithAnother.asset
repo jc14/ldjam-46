@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnabled: 1
   title: Caught Sleeping with Someone Else
-  description: '{c} actually slept with another person and {l} found out! {l is livid.
-    Can you blame {l}?'
+  description: '{c} actually slept with another person and {l} found out! {l} is
+    livid. Can you blame {l}?'
   damage: 10

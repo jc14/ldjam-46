@@ -17,4 +17,4 @@ MonoBehaviour:
   description: '{c} completely exploded at {l}''s friend in front of {l} about how
     the Earth is not flat. Who could blame {c} though, I mean, the earth is round.
     {l}''s friend was just being a dickhead.'
-  damage: 3
+  damage: 4
