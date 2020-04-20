@@ -8,6 +8,7 @@ public abstract class Hand<TCard, TAsset> : MonoBehaviour where TCard : Card<TAs
     [SerializeField] private Transform cardsContent;
 
     protected Board board;
+    public Board Board => board;
 
     private List<TCard> cards;
 

@@ -493,6 +493,7 @@ MonoBehaviour:
     type: 3}
   BadCardPrefab: {fileID: 5780559396880902050, guid: e66e469408887804288cf6299356fd1c,
     type: 3}
+  RepairCardsToAddPerBadDestroyed: 1.5
 --- !u!114 &58830018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2292,12 +2293,14 @@ MonoBehaviour:
     and yourself. The clients' cards are bad things they did and will affect their
     partner's relationship health bar at the end of each round, based on the number
     in red on the card. Your job is to select your cards and play them on the client's
-    cards to get them to do something nice so their partner will forgive them.\r\n\t\r\nThese
-    clients, in particular, are pretty horrible humans and will continue doing bad
-    things. You must keep the relationship alive for as long as possible by playing
-    your cards to eliminate their bad cards. Once either clients' relationship bar
-    falls below 0, they will commence the break up and the case will fail.\r\n\t\r\nGood
-    luck! "
+    cards to get them to do something nice so their partner will forgive them.\r\n\t\r\nAt
+    the start of each turn, you receive 1.5 times the amount of bad cards you discarded
+    last round. You can only hold 6 cards and clients will only ever have 2 cards
+    max. You will receive 5 cards to start the case.\r\n\t\r\nThese clients, in particular,
+    are pretty horrible humans and will continue doing bad things. You must keep
+    the relationship alive for as long as possible by playing your cards to eliminate
+    their bad cards. Once either clients' relationship bar falls below 0, they will
+    commence the break up and the case will fail.\r\n\t\r\nGood luck! "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2325,8 +2328,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2366,12 +2369,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 389968422}
-    characterCount: 881
+    characterCount: 1099
     spriteCount: 0
-    spaceCount: 158
-    wordCount: 154
+    spaceCount: 203
+    wordCount: 198
     linkCount: 0
-    lineCount: 14
+    lineCount: 17
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

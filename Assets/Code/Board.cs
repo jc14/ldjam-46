@@ -14,6 +14,11 @@ public class Board : MonoBehaviour
     public bool IsPlayingGame { get; private set; } = false;
     public int TurnsCompleted { get; private set; } = 0;
     public int CaseNumber { get; private set; }
+    public float ExtraRepairCardsToAdd { get; private set; }
+
+    [Space(10)]
+    [Range(0.1f, 2)]
+    public float RepairCardsToAddPerBadDestroyed = 1;
 
     public AudioManager Audio { get; private set; }
 
@@ -91,6 +96,8 @@ public class Board : MonoBehaviour
 
         client1.StartTurn();
         client2.StartTurn();
+
+        ExtraRepairCardsToAdd = 0;
     }
 
     public void EndRound()
@@ -144,5 +151,10 @@ public class Board : MonoBehaviour
 
         Audio.PlayPlacePlayer();
         player.DiscardSelectedCard();
+    }
+
+    public void OnBadCardDestroyed(BadCard card)
+    {
+        ExtraRepairCardsToAdd += RepairCardsToAddPerBadDestroyed;
     }
 }

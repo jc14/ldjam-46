@@ -26,7 +26,10 @@ public class BadCard : Card<BadCardAsset>
         remainingDamage -= amount;
 
         if (remainingDamage <= 0)
+        {
             hand.RemoveCard(this);
+            hand.Board.OnBadCardDestroyed(this);
+        }
 
         Render();
     }

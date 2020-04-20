@@ -22,8 +22,10 @@ public class PlayerHand : Hand<RepairCard, RepairCardAsset>
 
     public override void StartTurn()
     {
-        DrawNewCard();
-        DrawNewCard();
+        for (int i = 0; i < Mathf.FloorToInt(board.ExtraRepairCardsToAdd); i++)
+        {
+            DrawNewCard();
+        }
     }
 
     public void SelectCard(RepairCard card)
