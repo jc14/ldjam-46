@@ -10,7 +10,7 @@ public abstract class Hand<TCard, TAsset> : MonoBehaviour where TCard : Card<TAs
     protected Board board;
     public Board Board => board;
 
-    private List<TCard> cards;
+    protected List<TCard> cards;
 
     private void Awake()
     {

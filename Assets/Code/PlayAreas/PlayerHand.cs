@@ -26,6 +26,12 @@ public class PlayerHand : Hand<RepairCard, RepairCardAsset>
         {
             DrawNewCard();
         }
+
+        if (cards.Count == 0)
+        {
+            DrawNewCard();
+            DrawNewCard();
+        }
     }
 
     public void SelectCard(RepairCard card)
