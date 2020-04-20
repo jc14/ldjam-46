@@ -16,4 +16,4 @@ MonoBehaviour:
   title: Got Drunk with Friends
   description: '{c} came home completely wasted and {l} had to nurse {c} back to
     health. Vomit everywhere...'
-  damage: 4
+  damage: 3

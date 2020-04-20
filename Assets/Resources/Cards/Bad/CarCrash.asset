@@ -15,5 +15,5 @@ MonoBehaviour:
   isEnabled: 1
   title: Crashed Their Car
   description: While driving {l}'s car, {c} rear ended someone at a stop sign because
-    he was texting. Whoops...
+    they were texting. Whoops...
   damage: 5

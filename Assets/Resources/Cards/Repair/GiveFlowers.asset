@@ -15,4 +15,4 @@ MonoBehaviour:
   isEnabled: 1
   title: Give Flowers
   description: Buy a bouquet of their favorite flowers.
-  repairAmount: 2
+  repairAmount: 3

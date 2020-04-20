@@ -17,4 +17,4 @@ MonoBehaviour:
   description: '{c} won''t let {l} do anything fun. {c} keeps {l} locked away in
     the house watching Netflix all day long. {l} can only take so much Netflix and
     chill.'
-  damage: 5
+  damage: 3

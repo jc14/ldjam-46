@@ -15,6 +15,6 @@ MonoBehaviour:
   isEnabled: 1
   title: Had an Argument with Friend
   description: '{c} completely exploded at {l}''s friend in front of {l} about how
-    the earth is not flat. Who could blame {c} though, I mean, the earth is round.
+    the Earth is not flat. Who could blame {c} though, I mean, the earth is round.
     {l}''s friend was just being a dickhead.'
-  damage: 5
+  damage: 3
